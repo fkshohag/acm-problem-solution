@@ -15,11 +15,13 @@ struct point {
 // C[] contains convex hull ccw
 
 inline i64 TriArea2(point a, point b, point c) {
-    return (a.x*(b.y-c.y) + b.x*(c.y-a.y) + c.x*(a.y-b.y));
+    return (a.x*(b.y-c.y) + b.x*(c.y-a.y) + c.x*(a.y-b.y));/*given coordinate of the three vertices of triangle.
+                                                          it give us area of triangle
+                                                          Mathmatical Method is:- (ax*(by-cy)+bx(cy-ay)+cx(ay-by))/2 */
 }
 
 inline i64 sqDist(point a, point b) {
-    return (sq(a.x-b.x) + sq(a.y-b.y));
+    return (sq(a.x-b.x) + sq(a.y-b.y));//distance of two vertice coordinate
 }
 
 bool comp(point a, point b) {
@@ -32,7 +34,7 @@ bool comp(point a, point b) {
 void ConvexHull(i64 np, i64 &nc) {
     int i, j, pos = 0;
     for(i=1; i<np; i++)
-        if(P[i].y<P[pos].y || (P[i].y==P[pos].y && P[i].x>P[pos].x))
+        if(P[i].y<P[pos].y || (P[i].y==P[pos].y && P[i].x>P[pos].x))//find ther orgin of all point
             pos = i;
     swap(P[0], P[pos]);
     P0 = P[0];
