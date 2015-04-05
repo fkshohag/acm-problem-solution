@@ -34,7 +34,7 @@ bool comp(point a, point b) {
 void ConvexHull(i64 np, i64 &nc) {
     int i, j, pos = 0;
     for(i=1; i<np; i++)
-        if(P[i].y<P[pos].y || (P[i].y==P[pos].y && P[i].x>P[pos].x))//find ther orgin of all point
+        if(P[i].y<P[pos].y || (P[i].y==P[pos].y && P[i].x>P[pos].x))//find the orgin of all point
             pos = i;
     swap(P[0], P[pos]);
     P0 = P[0];
