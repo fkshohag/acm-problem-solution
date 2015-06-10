@@ -4,7 +4,7 @@
 using namespace std;
 int main()
 {
-freopen("in.text","r",stdin);
+//freopen("in.text","r",stdin);
    long int t,b,i,j,d,cont=0;
    string a;
    cin>>t;
